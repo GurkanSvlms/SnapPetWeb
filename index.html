@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SnapPet: Cat &amp; Dog Collector</title>
+  <meta name="description" content="SnapPet turns real street cats and dogs into collectible cards with privacy-first social play. Capture is free, location stays private, and feeding is rewarded.">
+  <meta name="theme-color" content="#FBF7F0">
+  <meta property="og:title" content="SnapPet: Cat &amp; Dog Collector">
+  <meta property="og:description" content="Meet real cats and dogs, collect their cards, feed them, and compete without exposing locations.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/app-icon.png">
+  <link rel="icon" href="assets/brand-icon.png">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="SnapPet home">
+      <img src="assets/brand-icon.png" alt="" width="48" height="48">
+      <span><strong>Snap</strong>Pet</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Cat &amp; dog collector for iOS</p>
+        <h1>Meet street pals. Turn real moments into collectible cards.</h1>
+        <p class="lead">SnapPet is a cozy collector game for the animals you meet outside. Use the live camera, discover cats and dogs, save deterministic cards, build albums, feed real animals, and climb fair leaderboards without exposing anyone's location.</p>
+        <div class="actions">
+          <a class="neo-button primary" href="#launch">Coming to the App Store</a>
+          <a class="neo-button secondary" href="privacy.html">Read Privacy Policy</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="SnapPet app preview">
+        <div class="phone-frame">
+          <div class="phone-top">
+            <span>Your pals</span>
+            <span class="pill">42</span>
+          </div>
+          <div class="card-preview legendary">
+            <div class="card-top">
+              <span class="pet-icon">CAT</span>
+              <span class="rarity">LEGENDARY</span>
+            </div>
+            <img src="assets/brand-icon.png" alt="SnapPet cat and dog camera icon">
+            <h2>Miso</h2>
+            <div class="trait-row">
+              <span>friendly</span>
+              <span>moon pal</span>
+            </div>
+            <div class="stat-grid">
+              <span>Charm 92</span>
+              <span>Speed 78</span>
+              <span>Luck 96</span>
+              <span>Cozy 88</span>
+            </div>
+          </div>
+          <div class="phone-actions">
+            <span>Collection</span>
+            <span class="camera-dot">CAM</span>
+            <span>Social</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="features">
+      <div class="section-heading">
+        <p class="eyebrow">Core loop</p>
+        <h2>Find. Save. Feed. Share.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="neo-card">
+          <span class="number">01</span>
+          <h3>Live camera discovery</h3>
+          <p>SnapPet uses the live camera to recognize cats and dogs. Photo import is not part of the core loop, keeping the game focused on real encounters.</p>
+        </article>
+        <article class="neo-card teal">
+          <span class="number">02</span>
+          <h3>Deterministic cards</h3>
+          <p>The same animal moment creates the same game identity through a deterministic card engine: species, rarity, name, traits, and stats.</p>
+        </article>
+        <article class="neo-card yellow">
+          <span class="number">03</span>
+          <h3>Albums and progress</h3>
+          <p>Build personal albums, earn XP, keep streaks, unlock badges, and collect everything from common pals to legendary finds.</p>
+        </article>
+        <article class="neo-card orange">
+          <span class="number">04</span>
+          <h3>Feeding is rewarded</h3>
+          <p>Feeding is a positive incentive, not a paywall. Fed pals can receive special badges and bonus progress while capture remains free.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="split" id="privacy">
+      <div>
+        <p class="eyebrow">Privacy promise</p>
+        <h2>Built to protect animals, not expose them.</h2>
+        <p>SnapPet is designed around a strict rule: animal locations do not leave the device. Friends and leaderboards are about collection progress, not maps of street animals.</p>
+      </div>
+      <div class="promise-list">
+        <div class="promise-item">
+          <strong>No public animal map</strong>
+          <span>Location is optional and local-only. It is never written to Firestore.</span>
+        </div>
+        <div class="promise-item">
+          <strong>No paid capture wall</strong>
+          <span>Capturing and collecting pals stays free. Monetization focuses on optional cosmetics and creative extras.</span>
+        </div>
+        <div class="promise-item">
+          <strong>No photo sharing by default</strong>
+          <span>Photos stay on the device unless the user chooses to export or share an image.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="band social-band">
+      <div class="section-heading">
+        <p class="eyebrow">Social without risk</p>
+        <h2>Compete on kindness and collection skill.</h2>
+      </div>
+      <div class="wide-card">
+        <div>
+          <h3>Friends, public cards, and leaderboards</h3>
+          <p>Add friends with a short code, compare collections, and climb leaderboards by total pals, legendary finds, and fed pals. Shared data is intentionally limited to nickname, friend code, scores, and location-free public card metadata.</p>
+        </div>
+        <ul class="tag-list" aria-label="Shared social fields">
+          <li>Nickname</li>
+          <li>Friend code</li>
+          <li>Scores</li>
+          <li>Species</li>
+          <li>Rarity</li>
+          <li>Fed badge</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="roadmap" id="launch">
+      <div class="section-heading">
+        <p class="eyebrow">Product direction</p>
+        <h2>A collector game with an ethical loop.</h2>
+      </div>
+      <div class="timeline">
+        <article>
+          <strong>v1.0</strong>
+          <span>iOS launch with live capture, collection, albums, progress, friends, leaderboards, sharing, privacy controls, and account deletion.</span>
+        </article>
+        <article>
+          <strong>v1.1</strong>
+          <span>Feeding verification, fed badges, feeding XP, and expanded anti-cheat signals.</span>
+        </article>
+        <article>
+          <strong>v1.2</strong>
+          <span>Optional cartoon transformations, card frames, album themes, and profile cosmetics.</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>SnapPet: Cat &amp; Dog Collector</strong>
+      <p>Capture is free. Locations stay private. Street pals stay safe.</p>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="mailto:sketchhero.team@gmail.com">sketchhero.team@gmail.com</a>
+    </div>
+  </footer>
+</body>
+</html>
