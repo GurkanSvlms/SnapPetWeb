@@ -25,7 +25,7 @@
 
   <main class="legal-page">
     <section class="legal-hero">
-      <p class="eyebrow">Effective June 26, 2026</p>
+      <p class="eyebrow">Effective June 28, 2026</p>
       <h1>Privacy Policy</h1>
       <p class="lead">This Privacy Policy explains how SnapPet: Cat &amp; Dog Collector handles information. SnapPet is designed to protect users and street animals: animal locations are not collected, shared, or written to our backend.</p>
     </section>
@@ -39,6 +39,7 @@
         <li>Gameplay progress such as total pals, legendary count, fed count, level, XP, streaks, badges, and leaderboard scores.</li>
         <li>Location-free public card metadata for social views, such as species, rarity, card name, and whether the pal was marked as fed.</li>
         <li>Technical security signals needed for Firebase App Check and abuse prevention.</li>
+        <li>Crash diagnostics collected through Firebase Crashlytics, such as crash data needed to find and fix app stability issues.</li>
       </ul>
 
       <h2>2. Information We Do Not Collect</h2>
@@ -63,9 +64,19 @@
       <p>SnapPet may use server-side services, including AI classification behind a Cloud Function, to verify feeding-related signals or creative optional features. These services are not used to change the deterministic identity of a card. API keys are not stored in the app client.</p>
 
       <h2>7. Data Sharing</h2>
-      <p>We use service providers only to run core app functionality, including Firebase Authentication, Firestore, Cloud Functions, and App Check. If advertising or optional paid features are introduced, this policy will be updated before those features are used in production.</p>
+      <p>We use service providers only to run core app functionality, including Firebase Authentication, Firestore, Cloud Functions, App Check, and Firebase Crashlytics for crash diagnostics. If advertising or optional paid features are introduced, this policy will be updated before those features are used in production.</p>
 
-      <h2>8. Data Retention and Deletion</h2>
+      <h2>8. App Store Privacy Label</h2>
+      <p>In App Store Connect, SnapPet's privacy label is intended to match the app's current data use:</p>
+      <ul>
+        <li>Identifiers: User ID, used for app functionality, not tracking.</li>
+        <li>Other Data: nickname, friend code, gameplay progress, and scores, used for app functionality, not tracking.</li>
+        <li>Diagnostics: Crash Data, collected through Firebase Crashlytics to improve app stability, not tracking.</li>
+        <li>Location: not collected by SnapPet backend services. Animal locations stay on device.</li>
+        <li>Tracking: no.</li>
+      </ul>
+
+      <h2>9. Data Retention and Deletion</h2>
       <p>Gameplay and account data are kept while your anonymous account is active. You can request account deletion from inside the app. Deletion is intended to remove backend account data, local app data, and the Firebase Auth identity associated with the app account.</p>
       <p>To delete your SnapPet account in the app:</p>
       <ol>
@@ -76,13 +87,13 @@
       </ol>
       <p>After confirmation, SnapPet attempts to delete your backend account data, local app data, and anonymous Firebase Auth identity. If you cannot access the app or need help with deletion, contact <a href="mailto:sketchhero.team@gmail.com">sketchhero.team@gmail.com</a>.</p>
 
-      <h2>9. Children</h2>
+      <h2>10. Children</h2>
       <p>SnapPet is not intended for children under the minimum age required by local law to use online services without parental consent. If you believe a child provided information without proper consent, contact us so we can delete it.</p>
 
-      <h2>10. Changes</h2>
+      <h2>11. Changes</h2>
       <p>We may update this Privacy Policy when the app changes. The updated policy will be posted on this page with a new effective date.</p>
 
-      <h2>11. Contact</h2>
+      <h2>12. Contact</h2>
       <p>For privacy questions or deletion requests, contact <a href="mailto:sketchhero.team@gmail.com">sketchhero.team@gmail.com</a>.</p>
     </section>
   </main>

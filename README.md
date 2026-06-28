@@ -17,8 +17,18 @@ Static marketing, privacy, and terms website for **SnapPet: Cat & Dog Collector*
 3. In GitHub, open **Settings > Pages**.
 4. Set **Build and deployment** to **Deploy from a branch**.
 5. Select branch `main` and folder `/root`.
-6. Use these App Store Connect URLs after publish:
-   - Privacy Policy: `https://<username>.github.io/snappet-site/privacy.html`
-   - Terms of Use: `https://<username>.github.io/snappet-site/terms.html`
+6. Use these live App Store Connect URLs:
+   - Privacy Policy: `https://gurkansvlms.github.io/SnapPetWeb/privacy.html`
+   - Terms of Use: `https://gurkansvlms.github.io/SnapPetWeb/terms.html`
+
+## App Store Connect Privacy Setup
+
+- Privacy Policy URL: `https://gurkansvlms.github.io/SnapPetWeb/privacy.html`
+- App Privacy label:
+  - Identifiers > User ID: App Functionality, not tracking.
+  - Other Data: App Functionality, not tracking.
+  - Diagnostics > Crash Data: App Functionality, not tracking.
+  - Location: not collected.
+  - Tracking: no.
 
 Support email in the HTML files is `sketchhero.team@gmail.com`.
