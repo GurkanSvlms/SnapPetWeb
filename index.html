@@ -1,13 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SnapPet: Cat &amp; Dog Collector</title>
-  <meta name="description" content="SnapPet turns real street cats and dogs into collectible cards with privacy-first social play. Capture is free, location stays private, and feeding is rewarded.">
+  <meta name="description" content="SnapPet turns real street cats and dogs into deterministic collectible cards with AI cartoonize, Explore posts, cloud restore, optional credits, and no backend animal location tracking.">
   <meta name="theme-color" content="#FBF7F0">
   <meta property="og:title" content="SnapPet: Cat &amp; Dog Collector">
-  <meta property="og:description" content="Meet real cats and dogs, collect their cards, feed them, and compete without exposing locations.">
+  <meta property="og:description" content="Meet real cats and dogs, collect deterministic cards, cartoonize favorites, explore shared catches, and compete without exposing animal locations.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/app-icon.png">
   <link rel="icon" href="assets/brand-icon.png">
@@ -34,13 +34,13 @@
       <div class="hero-copy">
         <p class="eyebrow">Cat &amp; dog collector for iOS</p>
         <h1>Meet street pals. Turn real moments into collectible cards.</h1>
-        <p class="lead">SnapPet is a cozy collector game for the animals you meet outside. Use the live camera, discover cats and dogs, save deterministic cards, build albums, feed real animals, and climb fair leaderboards without exposing anyone's location.</p>
+        <p class="lead">SnapPet is a cozy collector game for the animals you meet outside. Use the live camera, discover cats and dogs, save deterministic cards, build albums, cartoonize favorites, and climb fair leaderboards without exposing animal locations.</p>
         <div class="actions">
           <a class="neo-button primary" href="#launch">Coming to the App Store</a>
           <a class="neo-button secondary" href="privacy.html">Read Privacy Policy</a>
         </div>
       </div>
-      <div class="hero-visual" aria-label="SnapPet app preview">
+      <div class="hero-visual">
         <img class="hero-shot" src="assets/feature-capture.png" alt="SnapPet live camera capture screen showing a cat and dog">
       </div>
     </section>
@@ -62,7 +62,7 @@
     <section class="band" id="features">
       <div class="section-heading">
         <p class="eyebrow">Core loop</p>
-        <h2>Find. Save. Feed. Share.</h2>
+        <h2>Find. Save. Feed. Cartoonize. Explore.</h2>
       </div>
       <div class="feature-grid">
         <article class="neo-card">
@@ -82,8 +82,37 @@
         </article>
         <article class="neo-card orange">
           <span class="number">04</span>
-          <h3>Feeding is rewarded</h3>
-          <p>Feeding is a positive incentive, not a paywall. Fed pals can receive special badges and bonus progress while capture remains free.</p>
+          <h3>Feeding is the free path</h3>
+          <p>Feeding a pal is always free and unlimited. Quick adds without feeding have a small free allowance, then use optional credits.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="section-heading">
+        <p class="eyebrow">Live features</p>
+        <h2>Creative extras without changing the card identity.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="neo-card orange">
+          <span class="number">05</span>
+          <h3>AI Cartoonize</h3>
+          <p>Turn a captured pal photo into a warm illustrated version. Cartoonizing is cosmetic: it does not change the deterministic species, rarity, name, traits, or stats.</p>
+        </article>
+        <article class="neo-card teal">
+          <span class="number">06</span>
+          <h3>Explore feed</h3>
+          <p>Saved catches appear in Explore with a feed-ready photo, optional cartoon toggle, likes, owner name, and no location coordinates.</p>
+        </article>
+        <article class="neo-card yellow">
+          <span class="number">07</span>
+          <h3>Cloud restore</h3>
+          <p>Apple-linked accounts can restore cards, photos, cartoons, albums, badges, streaks, and progress after reinstalling or moving devices.</p>
+        </article>
+        <article class="neo-card">
+          <span class="number">08</span>
+          <h3>Credits</h3>
+          <p>Credits are optional convenience currency for extra cartoon transformations and quick add flows. Purchases are consumable packs handled through Apple.</p>
         </article>
       </div>
     </section>
@@ -100,12 +129,12 @@
           <span>Location is optional and local-only. It is never written to Firestore.</span>
         </div>
         <div class="promise-item">
-          <strong>No paid capture wall</strong>
-          <span>Capturing and collecting pals stays free. Monetization focuses on optional cosmetics and creative extras.</span>
+          <strong>Free to play, clear credits</strong>
+          <span>Feeding stays free and unlimited. Optional conveniences beyond the free allowance use credits you can buy.</span>
         </div>
         <div class="promise-item">
-          <strong>No photo sharing by default</strong>
-          <span>Photos stay on the device unless the user chooses to export or share an image.</span>
+          <strong>Photos are transparent</strong>
+          <span>Apple-linked backups are owner-only. Explore posts show saved catch photos and optional cartoons to other signed-in SnapPet users.</span>
         </div>
       </div>
     </section>
@@ -117,37 +146,40 @@
       </div>
       <div class="wide-card">
         <div>
-          <h3>Friends, public cards, and leaderboards</h3>
-          <p>Add friends with a short code, compare collections, and climb leaderboards by total pals, legendary finds, and fed pals. Shared data is intentionally limited to nickname, friend code, scores, and location-free public card metadata.</p>
+          <h3>Explore, profiles, friends, and leaderboards</h3>
+          <p>Like shared catches, switch between photo and cartoon when available, open user profiles, add friends with a short code, compare collections, and climb leaderboards by fair server-side scores. City labels are self-declared and optional, not GPS coordinates.</p>
         </div>
-        <ul class="tag-list" aria-label="Shared social fields">
+        <ul class="tag-list">
           <li>Nickname</li>
           <li>Friend code</li>
           <li>Scores</li>
+          <li>Photo</li>
+          <li>Cartoon</li>
           <li>Species</li>
           <li>Rarity</li>
-          <li>Fed badge</li>
+          <li>Likes</li>
+          <li>Optional city</li>
         </ul>
       </div>
     </section>
 
     <section class="roadmap" id="launch">
       <div class="section-heading">
-        <p class="eyebrow">Product direction</p>
-        <h2>A collector game with an ethical loop.</h2>
+        <p class="eyebrow">Product status</p>
+        <h2>The launch loop is active.</h2>
       </div>
       <div class="timeline">
         <article>
-          <strong>v1.0</strong>
-          <span>iOS launch with live capture, collection, albums, progress, friends, leaderboards, sharing, privacy controls, and account deletion.</span>
+          <strong>Core</strong>
+          <span>Live camera capture, deterministic cards, albums, progress, feeding rewards, Pet Home, account deletion, and location-free play.</span>
         </article>
         <article>
-          <strong>v1.1</strong>
-          <span>Feeding verification, fed badges, feeding XP, and expanded anti-cheat signals.</span>
+          <strong>Social</strong>
+          <span>Explore feed, likes, photo/cartoon toggles, profiles, friends, follows, leaderboards, and optional self-declared city labels.</span>
         </article>
         <article>
-          <strong>v1.2</strong>
-          <span>Optional cartoon transformations, card frames, album themes, and profile cosmetics.</span>
+          <strong>Restore + credits</strong>
+          <span>Apple Sign In, account-bound cloud restore, AI cartoon transformations, consumable credit packs, and server-authoritative purchase redemption.</span>
         </article>
       </div>
     </section>
@@ -156,7 +188,7 @@
   <footer class="site-footer">
     <div>
       <strong>SnapPet: Cat &amp; Dog Collector</strong>
-      <p>Capture is free. Locations stay private. Street pals stay safe.</p>
+      <p>Feed for free. Credits are optional. Locations stay private.</p>
     </div>
     <div class="footer-links">
       <a href="privacy.html">Privacy Policy</a>
