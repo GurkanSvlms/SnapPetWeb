@@ -217,6 +217,32 @@ h3 {
   background: var(--surface);
 }
 
+.download-button {
+  gap: 14px;
+  min-height: 82px;
+  padding: 14px 20px;
+  font-size: 1.18rem;
+}
+
+.download-button img {
+  width: 54px;
+  height: 54px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.download-button span {
+  display: grid;
+  line-height: 1.05;
+}
+
+.download-button small {
+  margin-top: 5px;
+  font-size: .82rem;
+  font-weight: 900;
+}
+
 .hero-visual {
   justify-self: center;
   width: min(100%, 430px);
@@ -613,6 +639,11 @@ h3 {
   .hero-shot {
     transform: none;
     box-shadow: 8px 8px 0 var(--ink);
+  }
+
+  .download-button {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .phone-frame {
