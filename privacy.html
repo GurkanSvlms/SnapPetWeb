@@ -28,6 +28,7 @@
       <p class="eyebrow">Effective June 30, 2026</p>
       <h1>Privacy Policy</h1>
       <p class="lead">This Privacy Policy explains how SnapPet: Cat &amp; Dog Collector handles information. SnapPet is designed to protect users and street animals: precise animal locations are not collected, sold, shared, or written to our backend.</p>
+      <p class="lead">Last updated: August 24, 2026 — added the Advertising section (Google AdMob).</p>
     </section>
 
     <section class="legal-content">
@@ -53,8 +54,7 @@
         <li>We do not use your optional city label as GPS or precise location data.</li>
         <li>We do not store your Apple payment card details. Purchases are processed by Apple.</li>
         <li>We do not sell personal data.</li>
-        <li>We do not use collected data for tracking across other companies' apps or websites.</li>
-        <li>We do not currently use advertising identifiers or an advertising SDK in production. If advertising is introduced, this policy will be updated before it is used.</li>
+        <li>We do not use collected data for tracking across other companies' apps or websites, except that our advertising partner may use the device advertising identifier for that purpose only if you allow it in the App Tracking Transparency prompt (see the Advertising section).</li>
       </ul>
 
       <h2>3. Camera, Photos, and Animal Detection</h2>
@@ -74,26 +74,38 @@
       <p>SnapPet uses optional consumable credits for convenience and cosmetic features. Feeding a pal is always free and unlimited. Quick adds without feeding use a free allowance first and then credits. The current server economy gives one welcome cartoon transformation and then charges credits for additional AI cartoon transformations.</p>
       <p>Credit packs are purchased through Apple using StoreKit. SnapPet receives and verifies Apple-signed transaction information through a Cloud Function, then records the credit grant and credit ledger in Firebase. SnapPet does not store your payment card number or Apple account payment details.</p>
 
-      <h2>8. App Store Privacy Label</h2>
+      <h2>8. Advertising (Google AdMob)</h2>
+      <p>SnapPet shows a limited number of ads through Google AdMob to keep the game free. Ads never gate gameplay: catching and feeding remain free and unlimited, and every reward that involves an ad is optional.</p>
+      <ul>
+        <li>Rewarded videos: on the Rewards screen you can choose to watch a short video ad to earn a small number of coins. Watching is always your choice.</li>
+        <li>Sponsored cards: the Explore feed may include ad cards clearly labeled "Sponsored". They are never shown before your first catch.</li>
+      </ul>
+      <p>When ads are served, Google may collect device information such as identifiers (including the advertising identifier, only if you allow it), an approximate location estimated from your IP address, ad interaction data such as views and taps, and diagnostic data. SnapPet does not send Google your photos, your pets, your nickname, or any animal location.</p>
+      <p>Before the first ad, iOS shows the App Tracking Transparency prompt. If you decline, ads still work and you earn the same rewards; they are simply not personalized. In regions that require it (such as the EEA and UK), a consent form from Google is shown first, and you can change your choice later from the app. You can also limit ad personalization at any time in iOS Settings &gt; Privacy &amp; Security &gt; Tracking.</p>
+      <p>When you finish a rewarded video, Google's servers notify our backend with your app account ID and the ad's transaction ID so the coins can be credited securely. This callback contains no photos, no contacts, and no location.</p>
+      <p>For details on how Google uses this data, see <a href="https://policies.google.com/technologies/ads" rel="noopener" target="_blank">how Google uses information from ads</a> and the <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Privacy Policy</a>.</p>
+
+      <h2>9. App Store Privacy Label</h2>
       <p>In App Store Connect, SnapPet's privacy label should match the app's current data use:</p>
       <ul>
-        <li>Identifiers: Firebase user ID and Apple Sign in account identifiers, used for app functionality, not tracking.</li>
+        <li>Identifiers: Firebase user ID and Apple Sign in account identifiers, used for app functionality, not tracking. Device identifiers, including the advertising identifier when you permit it, are used by our advertising partner for third-party advertising.</li>
         <li>Contact Info: Apple-provided name and email may be used for account functionality when you choose Sign in with Apple, not tracking.</li>
         <li>User Content: captured pet photos, cartoon images, avatars, and user-created names, used for app functionality and social features, not tracking.</li>
         <li>Purchases: consumable credit purchases and transaction records, used for app functionality, not tracking.</li>
         <li>Other Data: nickname, friend code, optional city label, gameplay progress, scores, likes, follows, and restore data, used for app functionality, not tracking.</li>
         <li>Diagnostics: crash and non-fatal error data collected through Firebase Crashlytics to improve app stability, not tracking.</li>
-        <li>Location: precise location is not collected by SnapPet backend services. Animal coordinates are not written to Firestore.</li>
-        <li>Tracking: no.</li>
+        <li>Usage and advertising data: ad views and interactions, used for third-party advertising and analytics, not linked to your identity.</li>
+        <li>Location: precise location is not collected by SnapPet backend services. Animal coordinates are not written to Firestore. Our advertising partner may estimate a coarse location from your IP address to serve ads.</li>
+        <li>Tracking: the advertising identifier may be used for tracking only if you allow it in the App Tracking Transparency prompt. Declining never affects gameplay or rewards.</li>
       </ul>
 
-      <h2>9. AI Services</h2>
+      <h2>10. AI Services</h2>
       <p>SnapPet uses Google Gemini through Firebase Cloud Functions for feeding verification and AI cartoon generation. The API key is not stored in the app client. Feeding verification processes image bytes and returns whether feeding was detected. Cartoon generation processes an image and returns a generated cartoon image. These AI signals do not change the deterministic card identity produced by SnapPet's card engine.</p>
 
-      <h2>10. Data Sharing</h2>
-      <p>We use service providers only to run core app functionality, including Firebase Authentication, Firestore, Firebase Storage, Cloud Functions, App Check, Crashlytics, StoreKit purchase verification, and Google Gemini behind Cloud Functions. We do not sell your data or use it for cross-app tracking.</p>
+      <h2>11. Data Sharing</h2>
+      <p>We use service providers only to run core app functionality, including Firebase Authentication, Firestore, Firebase Storage, Cloud Functions, App Check, Crashlytics, StoreKit purchase verification, and Google Gemini behind Cloud Functions. Google AdMob serves the ads described in the Advertising section. We do not sell your data, and we do not use it for cross-app tracking beyond the optional, permission-gated advertising identifier described above.</p>
 
-      <h2>11. Data Retention and Deletion</h2>
+      <h2>12. Data Retention and Deletion</h2>
       <p>Gameplay, backup, social, purchase, and account data are kept while your app account is active. You can request account deletion from inside the app. Deletion is intended to remove backend account data, local app data, and the Firebase Auth identity associated with the app account.</p>
       <p>To delete your SnapPet account in the app:</p>
       <ol>
@@ -104,13 +116,13 @@
       </ol>
       <p>After confirmation, SnapPet attempts to delete your backend account data through the deleteAccount Cloud Function, wipe local app data, and remove the Firebase Auth identity. If the account is linked to Apple, SnapPet also attempts to revoke the Apple token before deletion where possible. If you cannot access the app or need help with deletion, contact <a href="mailto:sketchhero.team@gmail.com">sketchhero.team@gmail.com</a>.</p>
 
-      <h2>12. Children</h2>
+      <h2>13. Children</h2>
       <p>SnapPet is not intended for children under the minimum age required by local law to use online services without parental consent. If you believe a child provided information without proper consent, contact us so we can delete it.</p>
 
-      <h2>13. Changes</h2>
+      <h2>14. Changes</h2>
       <p>We may update this Privacy Policy when the app changes. The updated policy will be posted on this page with a new effective date.</p>
 
-      <h2>14. Contact</h2>
+      <h2>15. Contact</h2>
       <p>For privacy questions or deletion requests, contact <a href="mailto:sketchhero.team@gmail.com">sketchhero.team@gmail.com</a>.</p>
     </section>
   </main>
