@@ -54,38 +54,31 @@
     .hero-visual {
       width: min(100%, 320px);
     }
-    /* Equal-sized cards holding the official badge artwork. The two badges have
-       different aspect ratios, so the card is what gets matched, not the image:
-       both flex to the same width and the badge is centred inside. */
-    .lp-store {
-      display: flex;
-      flex: 1 1 200px;
-      max-width: 320px;
+    /* The official badges are already buttons: a black rounded rectangle with its
+       own padding and corner radius. Wrapping them in a second bordered card read
+       as a button inside a button, which is where the dead space came from. They
+       stand on their own. The height is capped so both still fit one row on a
+       narrow phone. */
+    .actions {
       align-items: center;
-      justify-content: center;
-      min-height: 82px;
-      padding: 14px 18px;
-      border: 3px solid var(--ink);
-      border-radius: 14px;
-      background: var(--surface);
-      box-shadow: var(--shadow);
-      transition: transform .12s ease, box-shadow .12s ease;
+      --badge-h: clamp(48px, 5.2vw, 60px);
+    }
+    .lp-store {
+      display: inline-flex;
+      transition: transform .12s ease;
     }
     .lp-store:hover {
-      transform: translate(3px, 3px);
-      box-shadow: 4px 4px 0 var(--ink);
+      transform: translate(2px, 2px);
     }
     .lp-store img {
       display: block;
       width: auto;
-      max-width: 100%;
-      height: auto;
-      max-height: 42px;
+      height: var(--badge-h);
     }
     /* Google ships its badge with built-in clear space, so it needs to be ~7%
        taller for the two black rectangles to read as the same size. */
     .lp-store[data-store="android"] img {
-      max-height: 45px;
+      height: calc(var(--badge-h) * 1.07);
     }
     /* On a phone the hero has to end above the browser toolbar, or the second
        store button lands underneath it. */
@@ -106,10 +99,6 @@
       }
       .lp-trust {
         margin-top: 16px;
-      }
-      .lp-store {
-        flex-basis: 100%;
-        max-width: none;
       }
     }
   </style>
