@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Download SnapPet: Cat &amp; Dog Collector</title>
+  <meta name="description" content="Point your camera at a real street cat or dog and turn the moment into a collectible card. Free to play on iOS and Android.">
+  <!-- Ad landing page: kept out of search so it does not compete with index.html.
+       Remove this tag if you ever want it to rank organically. -->
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#FBF7F0">
+  <meta property="og:title" content="Download SnapPet: Cat &amp; Dog Collector">
+  <meta property="og:description" content="Turn the street cats and dogs you meet into collectible cards. Free on iOS and Android.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/app-icon.png">
+  <link rel="icon" href="assets/brand-icon.png">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
+  <link rel="preload" as="image" href="assets/lp/hero.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Page-scoped extras so the shared styles.css stays untouched. */
+    .lp-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .lp-cta {
+      text-align: center;
+    }
+    .lp-cta h2 {
+      margin-top: 0;
+    }
+    .lp-cta .actions {
+      justify-content: center;
+    }
+    .lp-note {
+      margin-top: 18px;
+      color: var(--warm-gray);
+      font-size: .88rem;
+      font-weight: 700;
+    }
+    /* styles.css sizes these images by width alone. This page also sets intrinsic
+       width/height attributes (so the layout does not jump while they load), which
+       without height:auto would stretch them to their full pixel height. */
+    .hero-shot,
+    .screen-grid img {
+      height: auto;
+    }
+    /* Keep the hero image short enough that the store buttons stay above the fold
+       on a laptop; on phones the copy and buttons already come first. */
+    .hero-visual {
+      width: min(100%, 320px);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="SnapPet">
+      <img src="assets/lp/icon.png" alt="" width="48" height="48">
+      <span>Snap<strong>Pet</strong></span>
+    </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="eyebrow">Free · iOS &amp; Android</p>
+        <h1 data-i18n="h1">Turn the street cats you meet into collectible cards.</h1>
+        <p class="lead" data-i18n="lead">Point your camera at a real cat or dog. SnapPet turns that moment into a card that is uniquely yours — name it, build albums, feed animals for rewards, and climb a fair leaderboard.</p>
+
+        <div class="actions" id="store-actions">
+          <a class="neo-button primary download-button" data-store="ios" href="https://apps.apple.com/app/id6784579838" target="_blank" rel="noopener" aria-label="Download SnapPet on the App Store">
+            <img src="assets/lp/icon.png" alt="" width="54" height="54">
+            <span>
+              <strong data-i18n="cta">Download SnapPet</strong>
+              <small data-i18n="ctaIos">on the App Store</small>
+            </span>
+          </a>
+          <a class="neo-button secondary download-button" data-store="android" href="https://play.google.com/store/apps/details?id=com.easestack.snappet" target="_blank" rel="noopener" aria-label="Get SnapPet on Google Play">
+            <img src="assets/lp/icon.png" alt="" width="54" height="54">
+            <span>
+              <strong data-i18n="cta">Download SnapPet</strong>
+              <small data-i18n="ctaAndroid">on Google Play</small>
+            </span>
+          </a>
+        </div>
+
+        <ul class="lp-trust">
+          <li class="pill" data-i18n="trust1">Free to play</li>
+          <li class="pill" data-i18n="trust2">Feeding is free and unlimited</li>
+          <li class="pill" data-i18n="trust3">Animal locations never leave your phone</li>
+        </ul>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-shot" src="assets/lp/hero.jpg" width="549" height="1190" alt="SnapPet live camera screen recognising a street cat" fetchpriority="high">
+      </div>
+    </section>
+
+    <section class="screens-showcase" aria-label="SnapPet app screens">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="screensEyebrow">App preview</p>
+        <h2 data-i18n="screensTitle">What it looks like</h2>
+      </div>
+      <div class="screen-grid">
+        <img src="assets/lp/screen-card.jpg" width="440" height="953" loading="lazy" decoding="async" alt="A collectible card revealed after a capture">
+        <img src="assets/lp/screen-collection.jpg" width="440" height="953" loading="lazy" decoding="async" alt="The collection screen with rare and legendary pals">
+        <img src="assets/lp/screen-feeding.jpg" width="440" height="953" loading="lazy" decoding="async" alt="Feeding rewards and badges">
+        <img src="assets/lp/screen-ai.jpg" width="440" height="953" loading="lazy" decoding="async" alt="An AI cartoonized pet card">
+        <img src="assets/lp/screen-leaderboard.jpg" width="440" height="953" loading="lazy" decoding="async" alt="The social leaderboard">
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="whyEyebrow">Why SnapPet</p>
+        <h2 data-i18n="whyTitle">A collector game about real animals</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="neo-card">
+          <span class="number">01</span>
+          <h3 data-i18n="f1t">Live camera only</h3>
+          <p data-i18n="f1b">No photo imports. Every card comes from an animal you actually met.</p>
+        </article>
+        <article class="neo-card teal">
+          <span class="number">02</span>
+          <h3 data-i18n="f2t">Cards that are yours</h3>
+          <p data-i18n="f2b">Species, rarity, name, traits and stats are generated from the moment you captured.</p>
+        </article>
+        <article class="neo-card yellow">
+          <span class="number">03</span>
+          <h3 data-i18n="f3t">Feed for free</h3>
+          <p data-i18n="f3b">Feeding an animal is always free and unlimited, and it is the best way to collect.</p>
+        </article>
+        <article class="neo-card orange">
+          <span class="number">04</span>
+          <h3 data-i18n="f4t">Fair competition</h3>
+          <p data-i18n="f4b">One shared leaderboard with friends, no pay-to-win, no developer favouritism.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="band lp-cta">
+      <h2 data-i18n="finalTitle">Your first card is one photo away.</h2>
+      <p class="lead" style="margin-inline:auto" data-i18n="finalBody">Free to download. No account needed to start playing.</p>
+      <div class="actions" id="store-actions-bottom">
+        <a class="neo-button primary download-button" data-store="ios" href="https://apps.apple.com/app/id6784579838" target="_blank" rel="noopener" aria-label="Download SnapPet on the App Store">
+          <img src="assets/lp/icon.png" alt="" width="54" height="54">
+          <span>
+            <strong data-i18n="cta">Download SnapPet</strong>
+            <small data-i18n="ctaIos">on the App Store</small>
+          </span>
+        </a>
+        <a class="neo-button secondary download-button" data-store="android" href="https://play.google.com/store/apps/details?id=com.easestack.snappet" target="_blank" rel="noopener" aria-label="Get SnapPet on Google Play">
+          <img src="assets/lp/icon.png" alt="" width="54" height="54">
+          <span>
+            <strong data-i18n="cta">Download SnapPet</strong>
+            <small data-i18n="ctaAndroid">on Google Play</small>
+          </span>
+        </a>
+      </div>
+      <p class="lp-note" data-i18n="finalNote">SnapPet: Cat &amp; Dog Collector</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>SnapPet: Cat &amp; Dog Collector</strong>
+      <p data-i18n="footerTag">Feed for free. Credits are optional. Locations stay private.</p>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html" data-i18n="privacy">Privacy Policy</a>
+      <a href="terms.html" data-i18n="terms">Terms of Use</a>
+      <a href="mailto:snappetapp@gmail.com">snappetapp@gmail.com</a>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    // ---- 1. Localisation -------------------------------------------------
+    // Turkish is the primary ad market, so TR visitors get Turkish copy.
+    // `?lang=tr` / `?lang=en` overrides detection, which makes the page testable.
+    var TR = {
+      eyebrow: 'Ücretsiz · iOS & Android',
+      h1: 'Sokakta gördüğün kediyi koleksiyon kartına çevir.',
+      lead: 'Kameranı gerçek bir kediye ya da köpeğe doğrult. SnapPet o anı sana özel bir karta dönüştürsün — isim ver, albüm yap, hayvanları besleyip ödül kazan, adil liderlik tablosunda yarış.',
+      cta: "SnapPet'i indir",
+      ctaIos: "App Store'dan",
+      ctaAndroid: "Google Play'den",
+      trust1: 'Oynaması ücretsiz',
+      trust2: 'Besleme ücretsiz ve sınırsız',
+      trust3: 'Hayvanların konumu telefonundan çıkmaz',
+      screensEyebrow: 'Uygulamadan',
+      screensTitle: 'Nasıl görünüyor',
+      whyEyebrow: 'Neden SnapPet',
+      whyTitle: 'Gerçek hayvanlar üzerine bir koleksiyon oyunu',
+      f1t: 'Sadece canlı kamera',
+      f1b: 'Galeriden yükleme yok. Her kart gerçekten karşılaştığın bir hayvandan geliyor.',
+      f2t: 'Sana özel kartlar',
+      f2b: 'Tür, nadirlik, isim, özellikler ve statlar yakaladığın andan üretiliyor.',
+      f3t: 'Ücretsiz besle',
+      f3b: 'Hayvan beslemek her zaman ücretsiz ve sınırsız — koleksiyon yapmanın en iyi yolu.',
+      f4t: 'Adil rekabet',
+      f4b: 'Arkadaşlarınla tek liderlik tablosu. Parayla üstünlük yok, geliştirici kayırması yok.',
+      finalTitle: 'İlk kartın bir fotoğraf uzağında.',
+      finalBody: 'İndirmesi ücretsiz. Oynamaya başlamak için hesap gerekmiyor.',
+      finalNote: 'SnapPet: Kedi ve Köpek Koleksiyonu',
+      footerTag: 'Besleme ücretsiz. Krediler isteğe bağlı. Konumlar gizli kalır.',
+      privacy: 'Gizlilik Politikası',
+      terms: 'Kullanım Koşulları'
+    };
+
+    var params = new URLSearchParams(location.search);
+    var forced = (params.get('lang') || '').toLowerCase();
+    var useTR = forced === 'tr' ||
+      (forced !== 'en' && (navigator.language || '').toLowerCase().indexOf('tr') === 0);
+
+    if (useTR) {
+      document.documentElement.lang = 'tr';
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var v = TR[el.getAttribute('data-i18n')];
+        if (v) el.textContent = v;
+      });
+    }
+
+    // ---- 2. Campaign passthrough ----------------------------------------
+    // Forwards this page's campaign tag into each store link so App Store Connect
+    // (ct) and Play Console (referrer) can attribute installs with no SDK in the app.
+    // There is deliberately NO auto-redirect: Meta rejects bridge pages that jump
+    // straight to a store, so the visitor always taps the button themselves.
+
+    // Fill from App Store Connect > Analytics > Acquisition > Campaigns > Create Campaign.
+    // Apple ignores `ct` unless `pt` is present, so iOS attribution stays dark until then.
+    var APPLE_PROVIDER_TOKEN = '';
+    var APPLE_ID = '6784579838';
+    var ANDROID_PACKAGE = 'com.easestack.snappet';
+
+    // Apple caps `ct` at 40 chars and rejects anything outside [A-Za-z0-9_-].
+    function tag(name, fallback) {
+      var raw = params.get(name) || fallback;
+      return raw.replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40) || fallback;
+    }
+    var campaign = tag('utm_campaign', params.get('ct') ? tag('ct', 'web') : 'web');
+    var source = tag('utm_source', 'web');
+    var medium = tag('utm_medium', 'referral');
+
+    var iosURL = 'https://apps.apple.com/app/id' + APPLE_ID + '?ct=' + campaign + '&mt=8';
+    if (APPLE_PROVIDER_TOKEN) iosURL += '&pt=' + encodeURIComponent(APPLE_PROVIDER_TOKEN);
+
+    var referrer = 'utm_source=' + source + '&utm_medium=' + medium + '&utm_campaign=' + campaign;
+    var androidURL = 'https://play.google.com/store/apps/details?id=' + ANDROID_PACKAGE +
+      '&referrer=' + encodeURIComponent(referrer);
+
+    document.querySelectorAll('[data-store="ios"]').forEach(function (a) { a.href = iosURL; });
+    document.querySelectorAll('[data-store="android"]').forEach(function (a) { a.href = androidURL; });
+
+    // ---- 3. Promote the visitor's own store ------------------------------
+    var ua = navigator.userAgent || '';
+    // iPadOS 13+ reports a desktop Safari UA, so fall back to the touch-capable Mac signature.
+    var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+      (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    var isAndroid = /Android/.test(ua);
+    if (!isIOS && !isAndroid) return; // desktop keeps the authored order
+
+    document.querySelectorAll('.actions').forEach(function (row) {
+      var own = row.querySelector(isIOS ? '[data-store="ios"]' : '[data-store="android"]');
+      var other = row.querySelector(isIOS ? '[data-store="android"]' : '[data-store="ios"]');
+      if (!own || !other) return;
+      own.style.order = '0';
+      other.style.order = '1';
+      own.classList.replace('secondary', 'primary');
+      other.classList.replace('primary', 'secondary');
+    });
+  })();
+  </script>
+</body>
+</html>
