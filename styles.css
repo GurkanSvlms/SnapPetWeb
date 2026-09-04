@@ -243,6 +243,26 @@ h3 {
   font-weight: 900;
 }
 
+/* Platform mark tile inside a download button. The selector has to be compound:
+   `.download-button span` above sets display:grid on every span in the button. */
+.download-button .store-mark {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.download-button .store-mark svg {
+  width: 27px;
+  height: 27px;
+  fill: var(--ink);
+}
+
 .hero-visual {
   justify-self: center;
   width: min(100%, 430px);

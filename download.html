@@ -54,28 +54,38 @@
     .hero-visual {
       width: min(100%, 320px);
     }
-    /* Official Apple and Google badge artwork, used unmodified. The two badges are
-       matched on height rather than width because their aspect ratios differ, and
-       Google ships theirs with built-in clear space, so it needs to be ~7% taller
-       for the two black rectangles to read as the same size. */
-    .actions {
-      align-items: center;
-      --badge-h: clamp(46px, 12.8vw, 56px);
-    }
+    /* Equal-sized cards holding the official badge artwork. The two badges have
+       different aspect ratios, so the card is what gets matched, not the image:
+       both flex to the same width and the badge is centred inside. */
     .lp-store {
-      display: inline-flex;
-      transition: transform .12s ease;
+      display: flex;
+      flex: 1 1 200px;
+      max-width: 320px;
+      align-items: center;
+      justify-content: center;
+      min-height: 82px;
+      padding: 14px 18px;
+      border: 3px solid var(--ink);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      transition: transform .12s ease, box-shadow .12s ease;
     }
     .lp-store:hover {
-      transform: translate(2px, 2px);
+      transform: translate(3px, 3px);
+      box-shadow: 4px 4px 0 var(--ink);
     }
     .lp-store img {
       display: block;
       width: auto;
-      height: var(--badge-h);
+      max-width: 100%;
+      height: auto;
+      max-height: 42px;
     }
+    /* Google ships its badge with built-in clear space, so it needs to be ~7%
+       taller for the two black rectangles to read as the same size. */
     .lp-store[data-store="android"] img {
-      height: calc(var(--badge-h) * 1.07);
+      max-height: 45px;
     }
     /* On a phone the hero has to end above the browser toolbar, or the second
        store button lands underneath it. */
@@ -96,6 +106,10 @@
       }
       .lp-trust {
         margin-top: 16px;
+      }
+      .lp-store {
+        flex-basis: 100%;
+        max-width: none;
       }
     }
   </style>
