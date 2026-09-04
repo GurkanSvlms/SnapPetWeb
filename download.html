@@ -61,7 +61,7 @@
        narrow phone. */
     .actions {
       align-items: center;
-      --badge-h: clamp(48px, 5.2vw, 60px);
+      --badge-h: clamp(52px, 5vw, 60px);
     }
     .lp-store {
       display: inline-flex;
@@ -75,10 +75,12 @@
       width: auto;
       height: var(--badge-h);
     }
-    /* Google ships its badge with built-in clear space, so it needs to be ~7%
-       taller for the two black rectangles to read as the same size. */
+    /* Google's PNG is 646x250 but its artwork is only 646x192 — the remaining 23%
+       is transparent padding baked into the file, while the Apple SVG fills its
+       viewBox exactly. Measured, not guessed: 1 / 0.768 makes the two black
+       rectangles the same visible height. */
     .lp-store[data-store="android"] img {
-      height: calc(var(--badge-h) * 1.07);
+      height: calc(var(--badge-h) * 1.302);
     }
     /* On a phone the hero has to end above the browser toolbar, or the second
        store button lands underneath it. */
