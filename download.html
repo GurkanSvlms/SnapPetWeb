@@ -256,9 +256,10 @@
     // There is deliberately NO auto-redirect: Meta rejects bridge pages that jump
     // straight to a store, so the visitor always taps the button themselves.
 
-    // Fill from App Store Connect > Analytics > Acquisition > Campaigns > Create Campaign.
-    // Apple ignores `ct` unless `pt` is present, so iOS attribution stays dark until then.
-    var APPLE_PROVIDER_TOKEN = '';
+    // Provider token from App Store Connect > Analytics > Acquisition > Campaigns.
+    // It belongs to the developer account, not the app, so it is the same for every
+    // campaign. Apple ignores `ct` without it.
+    var APPLE_PROVIDER_TOKEN = '128375664';
     var APPLE_ID = '6784579838';
     var ANDROID_PACKAGE = 'com.easestack.snappet';
 
@@ -271,8 +272,10 @@
     var source = tag('utm_source', 'web');
     var medium = tag('utm_medium', 'referral');
 
-    var iosURL = 'https://apps.apple.com/app/id' + APPLE_ID + '?ct=' + campaign + '&mt=8';
-    if (APPLE_PROVIDER_TOKEN) iosURL += '&pt=' + encodeURIComponent(APPLE_PROVIDER_TOKEN);
+    // Same shape App Store Connect's own campaign link generator emits.
+    var iosURL = 'https://apps.apple.com/app/apple-store/id' + APPLE_ID + '?';
+    if (APPLE_PROVIDER_TOKEN) iosURL += 'pt=' + encodeURIComponent(APPLE_PROVIDER_TOKEN) + '&';
+    iosURL += 'ct=' + campaign + '&mt=8';
 
     var referrer = 'utm_source=' + source + '&utm_medium=' + medium + '&utm_campaign=' + campaign;
     var androidURL = 'https://play.google.com/store/apps/details?id=' + ANDROID_PACKAGE +
